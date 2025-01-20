@@ -15,7 +15,9 @@ export default async function Review({
         <Link href={`/product/${productId}/reviews/2`}>review 2</Link>
       </li>
       <li>
-        <Link href={`/product/${productId}/reviews/3`}>review 3</Link>
+        <Link href={`/product/${productId}/reviews/3`}>
+          review 3
+        </Link>
       </li>
     </ul>
   );

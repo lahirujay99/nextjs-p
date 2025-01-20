@@ -24,7 +24,7 @@ export default async function ProductItem({ params }: Props) {
   return (
     <div>
       <p>Product ID is {productId}</p>
-      <div className="flx flex-row items-base underline">
+      <div className="flx flex-row  underline">
         lets see more{" "}
         <Link href={`/product/${productId}/reviews`}>click here</Link>
       </div>
