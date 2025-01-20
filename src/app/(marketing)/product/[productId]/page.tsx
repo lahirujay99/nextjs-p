@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 
 type Props = {
   params: Promise<{ productId: string }>;
@@ -20,5 +21,13 @@ export const generateMetadata = async ({
 
 export default async function ProductItem({ params }: Props) {
   const { productId } = await params;
-  return <h1>Product ID is {productId}</h1>;
+  return (
+    <div>
+      <p>Product ID is {productId}</p>
+      <div className="flx flex-row items-base underline">
+        lets see more{" "}
+        <Link href={`/product/${productId}/reviews`}>click here</Link>
+      </div>
+    </div>
+  );
 }
