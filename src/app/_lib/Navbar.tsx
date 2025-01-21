@@ -1,23 +1,63 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const Navlinks = [
+  {
+    name: "Home",
+    href: "/",
+  },
+  {
+    name: "Blog",
+    href: "/blog",
+  },
+  {
+    name: "About",
+    href: "/about",
+  },
+  {
+    name: "Counter",
+    href: "/counter",
+  },
+  {
+    name: "Product",
+    href: "/product",
+  },
+  {
+    name: "Login",
+    href: "/login",
+  },
+  {
+    name: "Register",
+    href: "/register",
+  },
+  {
+    name: "Forgot Password",
+    href: "/forgot-password",
+  },
+];
 
 export default function Navbar() {
+  const pathname = usePathname();
   return (
-    <div className="flex flex-row sticky top-0 left-0 space-x-5 bg-sky-300 justify-center mb-10 py-5">
-      <p className="text-lg">
-        <Link href="/">home</Link>
-      </p>
-      <p className="text-lg">
-        <Link href="/blog">blog</Link>
-      </p>
-      <p className="text-lg">
-        <Link href="/about">about</Link>
-      </p>
-      <p className="text-lg">
-        <Link href="/counter">counter</Link>
-      </p>
-      <p className="text-lg">
-        <Link href="/product">products</Link>
-      </p>
+    <div className="flex flex-col md:flex-row sticky top-0 left-0 space-x-5 bg-sky-950 justify-center mb-10 py-5">
+      {Navlinks.map((navlink) => {
+        const isActive =
+          pathname === navlink.href ||
+          (pathname.startsWith(navlink.href) && navlink.href !== "/");
+        return (
+          <p
+            className={
+              isActive
+                ? "bg-black/40 text-white font-bold"
+                : "text-lg text-white"
+            }
+            key={navlink.href}
+          >
+            <Link href={navlink.href}>{navlink.name}</Link>
+          </p>
+        );
+      })}
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import "../globals.css";
 import Navbar from "../_lib/Navbar";
+import Footer from "../_lib/Footer";
 
 export const metadata: Metadata = {
   title: {
@@ -19,8 +20,8 @@ export default function MarketingLayout({
     <html lang="en">
       <body>
         <Navbar />
-        <div className="container mx-auto mb-5 ">{children}</div>
-        <footer>footer</footer>
+        <div className="container mx-auto min-h-[75vh]">{children}</div>
+        <Footer />
       </body>
     </html>
   );
