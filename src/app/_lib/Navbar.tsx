@@ -36,12 +36,32 @@ const Navlinks = [
     href: "/forgot-password",
   },
 ];
+const NavlinksAuth = [
+  {
+    name: "Homepage",
+    href: "/",
+  },
+  {
+    name: "Login",
+    href: "/login",
+  },
+  {
+    name: "Register",
+    href: "/register",
+  },
+  {
+    name: "Forgot Password",
+    href: "/forgot-password",
+  },
+];
 
 export default function Navbar() {
   const pathname = usePathname();
+  const isAuth = ["/login", "/register", "/forgot-password"].includes(pathname);
+  const linksToDisplay = isAuth ? NavlinksAuth : Navlinks;
   return (
     <div className="flex flex-col md:flex-row sticky top-0 left-0 space-x-5 bg-sky-950 justify-center mb-10 py-5">
-      {Navlinks.map((navlink) => {
+      {linksToDisplay.map((navlink) => {
         const isActive =
           pathname === navlink.href ||
           (pathname.startsWith(navlink.href) && navlink.href !== "/");
