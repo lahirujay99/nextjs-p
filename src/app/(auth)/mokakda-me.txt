@@ -1,3 +1,8 @@
 (auth) mehema () asse dala thiyenne me thama route groups. 
 meken wenne url ekedi auth folder eka exclude wenawa meka hodai
  group ekak hadaganna naming prashnayak nathuwa 
+
+
+mokakda me template.tsx kiyannne = meken wenne samanyen layout.tsx ekedi state value eka preserve wela thiyenawa
+eth routes maru weddi login -> register ekata yaddi apita state ekak ehema thiyaganna one nattn apita me template.tsx kiyana file eka use karanna puluwan
+mekath layout ekata samanai
