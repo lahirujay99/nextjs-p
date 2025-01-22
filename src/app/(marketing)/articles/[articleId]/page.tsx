@@ -26,6 +26,7 @@ export default async function Articles({
 // import { use } from "react"; //use eken karanne client side component waladi async await wada karanne nane
 // // ehinda client side component wala promise ekak call karanna meka use karnna pululwan
 // // ehema nttn use state, use effect pawichchi karanna wenawa. nttn react-query wage library ekak use karnnath wenwa
+//layout components wala access karanna pululwan params witharai, search params access karanna ba. page.tsx wala dekama access karanna puluwan
 
 // export default function Articles({
 //   params,
