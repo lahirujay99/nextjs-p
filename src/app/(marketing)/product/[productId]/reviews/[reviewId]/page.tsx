@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 export default async function ReviewDetail({
   params,
 }: {
@@ -7,6 +7,7 @@ export default async function ReviewDetail({
   const { reviewId, productId } = await params;
   if (parseInt(reviewId) > 1000) {
     notFound();
+    //redirect("/product"); // mekenuth karanne router.push() wagema wadak
   }
   return (
     <h1>

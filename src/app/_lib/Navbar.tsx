@@ -24,6 +24,10 @@ const Navlinks = [
     href: "/product",
   },
   {
+    name: "Product-Orders",
+    href: "/order-product",
+  },
+  {
     name: "Login",
     href: "/login",
   },
