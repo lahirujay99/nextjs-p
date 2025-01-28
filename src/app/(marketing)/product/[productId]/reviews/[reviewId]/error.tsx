@@ -47,3 +47,9 @@ export default function Error({
 //meken thiyena benifit ekak thama error ekak unama mulu site ekama down wenne nathuwa e error eka
 //wechchi component eka hari page eka hri witharak wada karanne nathuwa yana eka
 //ethakota apita kisima case ekak nathuwa anikwa wada karana gaman meka hadganna puluwan
+
+//routing wada walata next/navigation use karanna mokadda next/router use karanne pages-router project walata
+//api use karanne app-router hinda api use karanna one next/navigation
+//anika Server Components	walata support karanneth next/navigation eka
+//                        next/router (Pages)	next/navigation (App)
+//Server Components ->      ❌ Not supporte    ✅ Works
