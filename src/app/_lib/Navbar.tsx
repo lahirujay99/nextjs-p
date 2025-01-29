@@ -28,16 +28,12 @@ const Navlinks = [
     href: "/order-product",
   },
   {
+    name: "Upload-Files",
+    href: "/upload",
+  },
+  {
     name: "Login",
     href: "/login",
-  },
-  {
-    name: "Register",
-    href: "/register",
-  },
-  {
-    name: "Forgot Password",
-    href: "/forgot-password",
   },
 ];
 const NavlinksAuth = [
@@ -73,7 +69,7 @@ export default function Navbar() {
           <p
             className={
               isActive
-                ? "bg-black/40 text-white font-bold"
+                ? "bg-black/40 text-white font-bold py-1 px-2 rounded"
                 : "text-lg text-white"
             }
             key={navlink.href}
