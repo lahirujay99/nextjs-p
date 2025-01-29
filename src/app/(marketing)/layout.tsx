@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import "../globals.css";
 import Navbar from "../_lib/Navbar";
 import Footer from "../_lib/Footer";
+import { ErrorWrapper } from "../error-wrapper";
 
 export const metadata: Metadata = {
   title: {
@@ -20,7 +21,9 @@ export default function MarketingLayout({
     <html lang="en">
       <body>
         <Navbar />
-        <div className="container mx-auto min-h-[75vh]">{children}</div>
+        <ErrorWrapper>
+          <div className="container mx-auto min-h-[75vh]">{children}</div>
+        </ErrorWrapper>
         <Footer />
       </body>
     </html>
